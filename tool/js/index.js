@@ -12,6 +12,12 @@ document.querySelector("#upload-file").addEventListener("change", event => {
   });
 });
 
+document.querySelector("#upload-config").addEventListener("change", event => {
+  Helper.readText(event.target.files[0]).then(data => {
+    buttons.innerHTML = JSON.parse(data).bubbles.map(({x, y}) => createButton(x, 1 - y).outerHTML).join("");
+  });
+});
+
 let isDragging = false;
 
 const size = 975;

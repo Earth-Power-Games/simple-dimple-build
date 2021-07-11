@@ -10,14 +10,23 @@
   <script src="js/index.js" defer></script>
 </head>
 <body>
-  <div>
-    <button>Export</button>
-    <input type="file" id="upload-file" accept="image/png">
-  </div>
   <div class="container">
     <img src="assets/sponge_bob.png">
     <div class="buttons">
       <!-- <img src="assets/button.png" class="button" style="--x: 50%; --y: 50%;"> -->
+    </div>
+  </div>
+  <div>
+    <div>
+      <button>Export</button>
+    </div>
+    <div>
+      <span>Upload image</span>
+      <input type="file" id="upload-file" accept="image/png">
+    </div>
+    <div>
+      <span>Upload config</span>
+      <input type="file" id="upload-config" accept="application/json">
     </div>
   </div>
 </body>
